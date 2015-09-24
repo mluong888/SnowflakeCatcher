@@ -13,7 +13,7 @@ Steps to completing the program (These are just a suggested starting point. Feel
   - The constructor should initialize the members as follows:
     - `x`: random integer from 0 to 300 (or whatever the width of the screen is) You must use `Math.random()`
     - `y`: random integer from 0 to 300 (or whatever the height of the screen is) You must use `Math.random()`
-    - `isMovin`g: `true`
+    - `isMoving: `true`
   - `void erase()` which first, sets the fill to black and draws a black ellipse of size 7 at (x,y)
   - `void move()` which checks if the snowflake isMoving. If it is, increase `y` by one
   - `void lookDown()` checks if `y` is between the top and bottom of the screen, and the position just below (x,y) is not black. If so, set `isMoving` to `false`; otherwise set `isMoving` to `true` 
