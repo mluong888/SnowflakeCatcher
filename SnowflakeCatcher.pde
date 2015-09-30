@@ -1,5 +1,6 @@
 Snowflake [] frosty = new Snowflake[500];
-
+int XX = 300;
+int YY = -300;
 void setup()
 {
   background(0);
@@ -21,13 +22,17 @@ void draw()
     frosty[i].wrap();
     frosty[i].show();
   }
+  fill(0);
+  ellipse(XX,YY,75,75);
+  fill(255);
+  ellipse(XX,YY,70,70);
+  YY++;
   
-
   //your code here
 }
 void mouseDragged()
 {
-  fill(mouseX,mouseY,250);
+  fill(mouseX,mouseY,125);
   ellipse(mouseX,mouseY,15,15);
   //your code here
 }
@@ -76,7 +81,7 @@ class Snowflake
   {
     if(isMoving==true)
     {
-      y+=2;
+      y+=5;
     }
    
     //your code here
