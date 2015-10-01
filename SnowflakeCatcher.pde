@@ -1,6 +1,7 @@
 Snowflake [] frosty = new Snowflake[500];
 int XX = 300;
 int YY = -300;
+int sizeX = 15;
 void setup()
 {
   background(0);
@@ -27,14 +28,21 @@ void draw()
   fill(255);
   ellipse(XX,YY,70,70);
   YY++;
+  if (YY>650)
+  {
+    YY=-200;
+    XX = (int)(Math.random()*600);
+  }
   
   //your code here
 }
 void mouseDragged()
 {
   fill(mouseX,mouseY,125);
-  ellipse(mouseX,mouseY,15,15);
+  ellipse(mouseX,mouseY,sizeX,sizeX);
+  
   //your code here
+
 }
 
 class Snowflake
@@ -59,7 +67,7 @@ class Snowflake
   }
   void lookDown()
   {
-    if (y>-5 && y<595 && get(x,y+4)!=color(0))
+    if (y>-5 && y<593 && get(x,y+6)!=color(0))
     {
       isMoving = false;
     }
@@ -81,7 +89,7 @@ class Snowflake
   {
     if(isMoving==true)
     {
-      y+=5;
+      y+=10;
     }
    
     //your code here
